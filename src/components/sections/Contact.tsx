@@ -116,7 +116,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="text-2xl lg:text-3xl">Send a Message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as
+                  Fill out the form below and I&apos;ll get back to you as soon as
                   possible.
                 </CardDescription>
               </CardHeader>
@@ -208,7 +208,7 @@ export function Contact() {
                   {/* Status Messages */}
                   {submitStatus === "success" && (
                     <p className="text-sm text-green-600 dark:text-green-400">
-                      Message sent successfully! I'll get back to you soon.
+                      Message sent successfully! I&apos;ll get back to you soon.
                     </p>
                   )}
                   {submitStatus === "error" && (
@@ -266,11 +266,11 @@ export function Contact() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Let's Collaborate</CardTitle>
+                <CardTitle>Let&apos;s Collaborate</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  I'm always interested in hearing about new projects and
+                  I&apos;m always interested in hearing about new projects and
                   opportunities. Whether you have a question or just want to say
                   hi, feel free to reach out!
                 </p>

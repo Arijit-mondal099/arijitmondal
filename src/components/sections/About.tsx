@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { SKILLS, PERSONAL_INFO } from "@/lib/constants";
 import { useFadeIn, useStagger } from "@/components/animations/gsap-hooks";
 import Image from "next/image";

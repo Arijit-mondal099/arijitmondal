@@ -51,8 +51,8 @@ export function Hero() {
           ref={titleRef as React.RefObject<HTMLDivElement>}
           className="space-y-4"
         >
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl font-sora">
-            Hi, I'm {" "}
+          <h1 className="text-3xl font-bold tracking-tight sm:text-6xl lg:text-7xl font-sora">
+            Hi, I&apos;m {" "}
             <span className="text-gradient relative inline-block">
               {PERSONAL_INFO.name}
               <Image
@@ -64,7 +64,7 @@ export function Hero() {
               />
             </span>
           </h1>
-          <p className="text-2xl sm:text-3xl font-semibold text-muted-foreground font-sora">
+          <p className="text-xl sm:text-3xl font-semibold text-muted-foreground font-sora">
             {PERSONAL_INFO.title}
           </p>
         </div>
@@ -74,11 +74,11 @@ export function Hero() {
           ref={contentRef as React.RefObject<HTMLDivElement>}
           className="space-y-6 max-w-4xl mx-auto"
         >
-          <p className="text-lg text-muted-foreground font-sora">
+          <p className="text-sm sm:text-lg text-muted-foreground font-sora">
             {PERSONAL_INFO.tagline}
           </p>
 
-          <p className="text-base text-muted-foreground font-grotesk">{PERSONAL_INFO.bio}</p>
+          <p className="text-xs sm:text-base text-muted-foreground font-grotesk">{PERSONAL_INFO.bio}</p>
 
           {/* CTA Buttons */}
           <div className="flex flex-row gap-4 justify-center items-center">

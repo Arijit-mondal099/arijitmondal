@@ -17,29 +17,105 @@ export const PERSONAL_INFO = {
 // ================= SKILLS =================
 export const SKILLS: Skill[] = [
   // Languages and Databases
-  { name: "C++", category: "Languages and Databases", icon: '/tech_stack_images/cpp.png' },
-  { name: "JavaScript", category: "Languages and Databases", icon: '/tech_stack_images/js.png' },
-  { name: "TypeScript", category: "Languages and Databases", icon: '/tech_stack_images/ts.png' },
-  { name: "HTML", category: "Languages and Databases", icon: '/tech_stack_images/html.png' },
-  { name: "CSS", category: "Languages and Databases", icon: '/tech_stack_images/css.png' },
-  { name: "MongoDB", category: "Languages and Databases", icon: '/tech_stack_images/mongodb.png' },
+  {
+    name: "C++",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/cpp.png",
+  },
+  {
+    name: "JavaScript",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/js.png",
+  },
+  {
+    name: "TypeScript",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/ts.png",
+  },
+  {
+    name: "HTML",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/html.png",
+  },
+  {
+    name: "CSS",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/css.png",
+  },
+  {
+    name: "MongoDB",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/mongodb.png",
+  },
 
   // Frameworks & Libraries
-  { name: "React.js", category: "Frameworks and Libraries", icon: '/tech_stack_images/reactjs.png' },
-  { name: "Next.js", category: "Frameworks and Libraries", icon: '/tech_stack_images/nextjs.png' },
-  { name: "Angular", category: "Frameworks and Libraries", icon: '/tech_stack_images/angular.png' },
-  { name: "Node.js", category: "Frameworks and Libraries", icon: '/tech_stack_images/nodejs.png' },
-  { name: "Express.js", category: "Frameworks and Libraries", icon: '/tech_stack_images/expressjs.png' },
-  { name: "Redux", category: "Frameworks and Libraries", icon: '/tech_stack_images/redux.png' },
-  { name: "Mongoose", category: "Frameworks and Libraries", icon: '/tech_stack_images/mongoose.png' },
-  { name: "Bootstrap", category: "Frameworks and Libraries", icon: '/tech_stack_images/bootstrap.png' },
-
+  {
+    name: "React.js",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/reactjs.png",
+  },
+  {
+    name: "Next.js",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/nextjs.png",
+  },
+  {
+    name: "Angular",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/angular.png",
+  },
+  {
+    name: "Node.js",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/nodejs.png",
+  },
+  {
+    name: "Express.js",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/expressjs.png",
+  },
+  {
+    name: "Redux",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/redux.png",
+  },
+  {
+    name: "Mongoose",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/mongoose.png",
+  },
+  {
+    name: "Tailwind CSS",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/tailwindcss.png",
+  },
+  {
+    name: "Bootstrap",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/bootstrap.png",
+  },
 
   // Tools & Platforms
-  { name: "Git", category: "Tools and Platforms", icon: '/tech_stack_images/git.png' },
-  { name: "GitHub", category: "Tools and Platforms", icon: '/tech_stack_images/github.png' },
-  { name: "AWS", category: "Tools and Platforms", icon: '/tech_stack_images/aws.png' },
-  { name: "Vs Code", category: "Tools and Platforms", icon: '/tech_stack_images/vscode.png' }
+  {
+    name: "Git",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/git.png",
+  },
+  {
+    name: "GitHub",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/github.png",
+  },
+  {
+    name: "AWS",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/aws.png",
+  },
+  {
+    name: "Vs Code",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/vscode.png",
+  },
 ];
 
 // ================= PROJECTS =================

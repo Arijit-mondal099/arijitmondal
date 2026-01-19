@@ -81,7 +81,7 @@ export function Hero() {
           <p className="text-xs sm:text-base text-muted-foreground font-grotesk">{PERSONAL_INFO.bio}</p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row gap-4 justify-center items-center">
+          <div className="flex flex-row flex-wrap gap-4 justify-center items-center relative z-50">
             <Button
               size="lg"
               onClick={handleScrollToProjects}
@@ -100,7 +100,7 @@ export function Hero() {
           </div>
 
           {/* Contact Links */}
-          <div className="flex gap-4 justify-center pt-4">
+          <div className="flex gap-4 justify-center pt-4 relative z-50">
             {SOCIAL_LINKS.filter((link) =>
               ["github", "linkedin", "twitter", "instagram", "email", "phone"].includes(link.icon)
             ).map((link) => (

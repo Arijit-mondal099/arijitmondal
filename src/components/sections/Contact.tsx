@@ -95,7 +95,7 @@ export function Contact() {
         className="object-cover -z-10"
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div
           ref={titleRef as React.RefObject<HTMLDivElement>}
@@ -114,10 +114,12 @@ export function Contact() {
           <div className="sticky top-20">
             <Card ref={formRef as React.RefObject<HTMLDivElement>}>
               <CardHeader>
-                <CardTitle className="text-2xl lg:text-3xl">Send a Message</CardTitle>
+                <CardTitle className="text-2xl lg:text-3xl">
+                  Send a Message
+                </CardTitle>
                 <CardDescription>
-                  Fill out the form below and I&apos;ll get back to you as soon as
-                  possible.
+                  Fill out the form below and I&apos;ll get back to you as soon
+                  as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -254,7 +256,7 @@ export function Contact() {
                         <p className="text-sm text-muted-foreground">
                           {link.url.replace(
                             /(https?:\/\/)|(mailto:)|(tel:)/g,
-                            ""
+                            "",
                           )}
                         </p>
                       </div>

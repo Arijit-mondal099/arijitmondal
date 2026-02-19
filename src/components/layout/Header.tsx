@@ -41,8 +41,8 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-      <nav className="container-custom flex h-16 items-center justify-between">
+    <header className="fixed inset-x-2 lg:inset-x-0 top-6 z-50 container-custom border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 rounded-full">
+      <nav className="flex h-18 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="relative flex items-center h-9 w-9">
           <Image
@@ -110,11 +110,11 @@ export function Header() {
       {/* Mobile Navigation links */}
       {mobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 top-16 z-40 min-h-[calc(100vh-4rem)] bg-background/95 backdrop-blur-3xl"
+          className="md:hidden fixed inset-2 lg:inset-0 top-24 z-40 min-h-[calc(100vh-10rem)] bg-background backdrop-blur supports-backdrop-filter:bg-background/99 rounded-2xl"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="container-custom py-4 flex flex-col gap-4 border-t h-full"
+            className="container-custom py-8 flex flex-col gap-4 border h-full rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="space-y-4">

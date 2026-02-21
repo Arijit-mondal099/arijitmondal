@@ -26,7 +26,6 @@ import {
 } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import { useFadeIn, useSlideIn } from "@/components/animations/gsap-hooks";
-import Image from "next/image";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -88,12 +87,13 @@ export function Contact() {
 
   return (
     <section id="contact" className="section-padding relative">
-      <Image
-        src={"/app_images/grid.png"}
-        alt="contact-grid-image"
-        fill
-        className="object-cover -z-10"
-      />
+      {/* background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[48px_48px]"
+        />
+      </div>
 
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}

@@ -18,13 +18,16 @@ export function About() {
   const skillsRef = useStagger(0.1);
 
   // Group skills by category
-  const skillsByCategory = SKILLS.reduce((acc, skill) => {
-    if (!acc[skill.category]) {
-      acc[skill.category] = [];
-    }
-    acc[skill.category].push(skill);
-    return acc;
-  }, {} as Record<string, typeof SKILLS>);
+  const skillsByCategory = SKILLS.reduce(
+    (acc, skill) => {
+      if (!acc[skill.category]) {
+        acc[skill.category] = [];
+      }
+      acc[skill.category].push(skill);
+      return acc;
+    },
+    {} as Record<string, typeof SKILLS>,
+  );
 
   const categoryTitles: Record<string, string> = {
     frontend: "Frontend",
@@ -34,13 +37,14 @@ export function About() {
   };
 
   return (
-    <section id="about" className="section-padding bg-muted/30 relative">
-      <Image
-        src={"/app_images/grid.png"}
-        alt="about-grid-image"
-        fill
-        className="object-cover -z-10"
-      />
+    <section id="about" className="section-padding relative">
+      {/* background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[48px_48px]"
+        />
+      </div>
 
       <div className="container-custom relative z-10">
         {/* Section Title */}
@@ -110,13 +114,13 @@ export function About() {
                 </CardHeader>
 
                 <CardContent>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     {skills.map((skill) => (
                       <div
                         key={skill.name}
                         className="flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300"
                       >
-                        <div className="w-20 h-20 overflow-hidden">
+                        <div className="w-20 h-20 border p-2 shadow rounded-2xl overflow-hidden">
                           <Image
                             src={skill.icon!}
                             alt={skill.name}

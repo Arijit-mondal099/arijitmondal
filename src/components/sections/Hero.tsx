@@ -30,20 +30,15 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="section-padding min-h-screen flex items-center justify-center bg-linear-to-b from-background via-background to-muted/20"
+      className="section-padding min-h-screen flex items-center justify-center"
     >
-      <Image
-        src={"/app_images/grid.png"}
-        alt="hero-grid-image"
-        fill
-        className="object-cover"
-      />
-      <Image
-        src={"/app_images/stars.svg"}
-        alt="hero-grid-image"
-        fill
-        className="object-cover"
-      />
+      {/* background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[48px_48px]"
+        />
+      </div>
 
       <div className="container-custom text-center space-y-8">
         {/* Animated Title */}

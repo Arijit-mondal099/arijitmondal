@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <div className="absolute inset-0 z-40">
+      {/* <div className="absolute inset-0 -z-10">
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
@@ -53,8 +53,9 @@ export default function RootLayout({
           distortion={0.05}
           className="custom-rays"
         />
-      </div>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      </div> */}
+
+      <body className={`${inter.variable} font-sans antialiased bg-linear-to-b from-background via-background to-muted/20`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

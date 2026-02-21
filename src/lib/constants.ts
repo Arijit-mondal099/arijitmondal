@@ -7,11 +7,10 @@ export const PERSONAL_INFO = {
   tagline: "Building scalable, high-performance web applications",
   email: "arijitm717@gmail.com",
   location: "West Bengal, India",
-  bio: `Full Stack Web Developer with 6 months of hands-on industry experience and a strong foundation in 
-  React.js, Node.js, and MongoDB. I specialize in building responsive user interfaces, secure REST APIs, 
-  and real-time features. Experienced in AWS Lambda-based backend systems, scalable dashboards, 
-  and performance-focused frontend development. Passionate about writing clean, maintainable code 
-  and continuously improving my skill set.`,
+  bio: `Full Stack Developer specializing in scalable, high-performance applications with React.js, Next.js, 
+  Node.js, Express.js, and MongoDB. Experienced in building production-ready AI systems using RAG, 
+  LLM integrations, and real-time architectures, delivered on AWS and Docker. Passionate about writing 
+  clean, maintainable code and continuously improving my skill set.`,
 };
 
 // ================= SKILLS =================
@@ -47,6 +46,11 @@ export const SKILLS: Skill[] = [
     category: "Languages and Databases",
     icon: "/tech_stack_images/mongodb.png",
   },
+  {
+    name: "Pinecone (Vector DB)",
+    category: "Languages and Databases",
+    icon: "/tech_stack_images/pinecone.png",
+  },
 
   // Frameworks & Libraries
   {
@@ -58,11 +62,6 @@ export const SKILLS: Skill[] = [
     name: "Next.js",
     category: "Frameworks and Libraries",
     icon: "/tech_stack_images/nextjs.png",
-  },
-  {
-    name: "Angular",
-    category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/angular.png",
   },
   {
     name: "Node.js",
@@ -85,14 +84,51 @@ export const SKILLS: Skill[] = [
     icon: "/tech_stack_images/mongoose.png",
   },
   {
+    name: "Socket.IO",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/socketio.png",
+  },
+  {
     name: "Tailwind CSS",
     category: "Frameworks and Libraries",
     icon: "/tech_stack_images/tailwindcss.png",
   },
   {
-    name: "Bootstrap",
+    name: "Shadcn UI",
     category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/bootstrap.png",
+    icon: "/tech_stack_images/shadcn.png",
+  },
+  {
+    name: "Motion",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/motion.png",
+  },
+  {
+    name: "LangChain",
+    category: "Frameworks and Libraries",
+    icon: "/tech_stack_images/langchain.png",
+  },
+
+  // AI / Data
+  {
+    name: "RAG",
+    category: "AI and Data",
+    icon: "/tech_stack_images/rag.png",
+  },
+  {
+    name: "LLM Integration",
+    category: "AI and Data",
+    icon: "/tech_stack_images/llm.png",
+  },
+  {
+    name: "Embeddings",
+    category: "AI and Data",
+    icon: "/tech_stack_images/embeddings.png",
+  },
+  {
+    name: "AI Agents",
+    category: "AI and Data",
+    icon: "/tech_stack_images/agents.png",
   },
 
   // Tools & Platforms
@@ -112,7 +148,17 @@ export const SKILLS: Skill[] = [
     icon: "/tech_stack_images/aws.png",
   },
   {
-    name: "Vs Code",
+    name: "Docker",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/docker.png",
+  },
+  {
+    name: "Postman",
+    category: "Tools and Platforms",
+    icon: "/tech_stack_images/postman.png",
+  },
+  {
+    name: "VS Code",
     category: "Tools and Platforms",
     icon: "/tech_stack_images/vscode.png",
   },
@@ -122,24 +168,28 @@ export const SKILLS: Skill[] = [
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "DroneTV Platform (Professional Work)",
+    title: "AI Customer Support Chatbot",
     description:
-      "Large-scale platform for professionals, companies, and events with admin dashboards.",
+      "Full-stack AI-powered customer support platform with an embeddable chat widget.",
     longDescription:
-      "Worked as a Frontend / Full Stack Developer on DroneTV, building professional, company, and event modules. " +
-      "Implemented editable templates, AWS Lambda APIs, admin dashboards, image cropping using react-easy-crop, " +
-      "lead management, chat systems, and role-based workflows.",
-    image: "/project_images/dronetv.png",
+      "Designed a full-stack AI-powered customer support platform using Next.js 16 (App Router), React 19, TypeScript, and MongoDB, " +
+      "featuring a production-ready embeddable chat widget deployable across external websites in under 10 minutes. " +
+      "Integrated Google Gemini AI for context-aware response generation using custom business knowledge bases. " +
+      "Architected secure REST API routes with enterprise-grade authentication via Scalekit SDK. " +
+      "Engineered a dynamic chatbot configuration system allowing businesses to customize AI personality, tone, and training data.",
+    image: "/project_images/ai-chatbot.png",
     techStack: [
-      "React",
-      "AWS Lambda",
-      "REST APIs",
-      "Tailwind CSS",
+      "Next.js",
+      "React 19",
+      "TypeScript",
       "MongoDB",
-      "Socket.IO",
+      "Google Gemini AI",
+      "RAG",
+      "Scalekit SDK",
+      "REST APIs",
     ],
-    githubUrl: "https://github.com/gisipageums-droid/Dronetv/tree/main",
-    liveUrl: "https://dronetv.in",
+    githubUrl: "",
+    liveUrl: "",
     featured: true,
   },
   {
@@ -147,11 +197,13 @@ export const PROJECTS: Project[] = [
     title: "Doctor Appointment Booking App",
     description: "Full-stack appointment booking system with payments.",
     longDescription:
-      "Developed a full-stack doctor appointment system with role-based dashboards for doctors and admins. " +
-      "Implemented JWT authentication, appointment scheduling, Razorpay payments, and file uploads using " +
-      "Multer and Cloudinary. Improved booking efficiency by ~40%.",
+      "Engineered a full-stack doctor appointment system using React.js, Redux, Node.js, Express.js, and MongoDB, " +
+      "featuring role-based dashboards for doctors and admins. " +
+      "Integrated secure JWT-based authentication, appointment scheduling, and Razorpay for online payment processing. " +
+      "Managed file uploads using Multer and Cloudinary, reducing manual effort by 50%. " +
+      "Increased booking efficiency by approximately 40%, supporting over 100 users through backend optimization and streamlined workflows.",
     image: "/project_images/doctor-app.png",
-    techStack: ["React", "Redux", "Node.js", "Express", "MongoDB", "Razorpay"],
+    techStack: ["React", "Redux", "Node.js", "Express", "MongoDB", "Razorpay", "Multer", "Cloudinary"],
     githubUrl: "https://github.com/Arijit-mondal099/health",
     liveUrl: "https://health-frontend-c4x4.onrender.com",
     featured: true,
@@ -200,7 +252,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "5",
-    title: "An blog app with AI features",
+    title: "Blog App with AI Features",
     description: `A modern, full-stack blog application that allows users to create, view, and manage blog posts.`,
     image: "/project_images/blog-app.png",
     techStack: [
@@ -226,9 +278,9 @@ export const PROJECTS: Project[] = [
     description:
       "A modern, full-stack e-commerce platform built with React and Node.js, featuring a sleek user interface and robust backend functionality.",
     longDescription:
-      "Developed a real-time chat application supporting 50+ users using Socket.IO. " +
-      "Implemented JWT authentication, online presence tracking, message history, " +
-      "and global state management using Zustand.",
+      "Built a full-featured e-commerce platform with product listings, cart management, and payment integration. " +
+      "Implemented global state management using Redux Toolkit and handled media with Cloudinary. " +
+      "Integrated Razorpay for secure payment processing.",
     image: "/project_images/zenocart.png",
     techStack: [
       "React",
@@ -250,16 +302,15 @@ export const PROJECTS: Project[] = [
 export const TIMELINE: TimelineItem[] = [
   {
     id: "1",
-    title: "Frontend / Full Stack Developer",
-    organization: "DroneTV",
-    location: "Remote",
-    startDate: "2024-07",
-    endDate: "2025-01",
+    title: "Full Stack MERN Intern",
+    organization: "IPage Group (IPAGE UM SERVICES PVT LTD)",
+    location: "Hyderabad, India (Remote)",
+    startDate: "2025-09",
+    endDate: "2026-02",
     description: [
-      "Developed Professional, Company, and Event modules with editable templates",
-      "Integrated AWS Lambda APIs for admin approval, dashboard data, and lead management",
-      "Built user dashboard with template tracking, chat system, and lead workflows",
-      "Implemented image cropping, UI optimizations, and validation logic",
+      "Built and deployed end-to-end full-stack features using the MERN stack across a multi-module production project, including responsive UI components, authentication flows, and interactive dashboard modules",
+      "Designed and integrated multiple RESTful API endpoints via AWS API Gateway, enabling secure communication between frontend applications and scalable serverless backend services",
+      "Engineered serverless backend workflows using AWS Lambda and AWS DynamoDB to handle structured data operations and real-time updates, improving system scalability",
     ],
     type: "experience",
   },
@@ -272,9 +323,9 @@ export const TIMELINE: TimelineItem[] = [
     endDate: "2026-06",
     description: [
       "Current GPA: 8.3 / 10",
+      "3rd Year, 6th Semester",
       "Core subjects: Data Structures, Algorithms, Web Development",
       "Strong focus on full-stack web technologies",
-      "Last year 5th semester",
     ],
     type: "education",
   },
@@ -318,13 +369,17 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const SEO_METADATA: SEOMetadata = {
   title: "Arijit Mondal | Full Stack Web Developer",
   description:
-    "Full Stack Web Developer with experience in React, Node.js, MongoDB, AWS Lambda, and real-time applications.",
+    "Full Stack Developer specializing in React, Next.js, Node.js, MongoDB, AWS, and AI/RAG-powered applications.",
   keywords: [
     "Full Stack Developer",
     "React Developer",
+    "Next.js Developer",
     "Node.js Developer",
     "MongoDB",
     "AWS Lambda",
+    "RAG",
+    "LLM Integration",
+    "AI Developer",
     "Web Developer Portfolio",
   ],
   ogImage: "/app_images/profile.jpg",

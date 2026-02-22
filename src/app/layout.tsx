@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SEO_METADATA } from "@/lib/constants";
-import LightRays from "@/components/LightRays";
+// import LightRays from "@/components/LightRays";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,6 +71,11 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+
+        <script
+          src="https://supportai-seven.vercel.app/chat_bot.js"
+          data-owner-id="usr_112984746597811213"
+        ></script>
       </body>
     </html>
   );

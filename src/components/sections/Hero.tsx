@@ -179,9 +179,9 @@ export function Hero() {
                     variant={variant}
                     className="cursor-pointer font-code relative z-10"
                   >
-                    {label}
+                    <a href={label === "Get In Touch" ? "#contact" : "#projects"}>{label}</a>
                   </Button>
-                  {/* Shimmer sweep on hover */}
+
                   <AnimatePresence>
                     {hoverBtn === label && (
                       <motion.div
@@ -193,7 +193,7 @@ export function Hero() {
                         initial={{ x: "-100%" }}
                         animate={{ x: "200%" }}
                         exit={{ x: "200%" }}
-                        transition={{ duration: 0.55, ease: "easeInOut" }}
+                        transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
                       />
                     )}
                   </AnimatePresence>

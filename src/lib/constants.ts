@@ -75,7 +75,7 @@ export const SKILLS: Skill[] = [
   {
     name: "MySQL",
     category: "Backend",
-    icon: "/tech_stack_images/mongodb.png",
+    icon: "/tech_stack_images/mysql.png",
   },
   {
     name: "Pinecone (Vector DB)",
@@ -100,33 +100,12 @@ export const SKILLS: Skill[] = [
   {
     name: "Socket.IO",
     category: "Backend",
-    icon: "/tech_stack_images/socketio.png",
+    icon: "/tech_stack_images/socket.png",
   },
   {
     name: "LangChain",
     category: "AI and Data",
     icon: "/tech_stack_images/langchain.png",
-  },
-  // AI / Data
-  {
-    name: "RAG",
-    category: "AI and Data",
-    icon: "/tech_stack_images/rag.png",
-  },
-  {
-    name: "LLM Integration",
-    category: "AI and Data",
-    icon: "/tech_stack_images/llm.png",
-  },
-  {
-    name: "Embeddings",
-    category: "AI and Data",
-    icon: "/tech_stack_images/embeddings.png",
-  },
-  {
-    name: "AI Agents",
-    category: "AI and Data",
-    icon: "/tech_stack_images/agents.png",
   },
   // Cloud & Tools
   {
@@ -152,7 +131,7 @@ export const SKILLS: Skill[] = [
   {
     name: "Postman",
     category: "Cloud & Tools",
-    icon: "/tech_stack_images/postman.png",
+    icon: "/tech_stack_images/postman.jpg",
   },
   {
     name: "VS Code",
@@ -174,7 +153,7 @@ export const PROJECTS: Project[] = [
       "Integrated Google Gemini AI for context-aware response generation using custom business knowledge bases. " +
       "Architected secure REST API routes with enterprise-grade authentication via Scalekit SDK. " +
       "Engineered a dynamic chatbot configuration system allowing businesses to customize AI personality, tone, and training data.",
-    image: "/project_images/ai-chatbot.png",
+    image: "/project_images/SupportAI.png",
     techStack: [
       "Next.js",
       "React 19",
@@ -185,8 +164,8 @@ export const PROJECTS: Project[] = [
       "Scalekit SDK",
       "REST APIs",
     ],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/Arijit-mondal099/AI-Customer-Support-Chatbot",
+    liveUrl: "https://supportai-seven.vercel.app/",
     featured: true,
   },
   {

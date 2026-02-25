@@ -25,7 +25,8 @@ import {
   Phone,
 } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
-import { useFadeIn, useSlideIn } from "@/components/animations/gsap-hooks";
+import { useSlideIn } from "@/components/animations/gsap-hooks";
+import { motion } from "motion/react";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -52,7 +53,6 @@ export function Contact() {
     "idle" | "success" | "error"
   >("idle");
 
-  const titleRef = useFadeIn();
   const formRef = useSlideIn("left");
   const contactInfoRef = useSlideIn("right");
 
@@ -89,17 +89,41 @@ export function Contact() {
     <section id="contact" className="section-padding relative">
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div
-          ref={titleRef as React.RefObject<HTMLDivElement>}
-          className="text-center mb-12"
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, damping: 18 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Get In Touch
+          <motion.div
+            className="inline-block mb-3"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+          >
+            <span className="text-xs font-mono tracking-widest text-primary uppercase border border-primary/30 rounded-full px-4 py-1 bg-primary/5">
+              CONTACT
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl font-bold tracking-tight sm:text-4xl mb-4 font-sora">
+            Get In{" "}
+            <motion.span
+              className="text-gradient"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              Touch
+            </motion.span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sora">
             Have a question or want to work together? Feel free to reach out!
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Contact Form */}

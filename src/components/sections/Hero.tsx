@@ -142,18 +142,18 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            <RevealText text={PERSONAL_INFO.title} delay={1} />
+            <RevealText text={PERSONAL_INFO.title} delay={0.5} />
           </motion.p>
         </motion.div>
 
         {/* Body text with word-by-word reveal */}
         <div className="space-y-6 max-w-4xl mx-auto">
           <p className="text-sm sm:text-lg text-muted-foreground font-sora">
-            <RevealText text={PERSONAL_INFO.tagline} delay={1.3} />
+            <RevealText text={PERSONAL_INFO.tagline} delay={0.8} />
           </p>
 
           <p className="text-xs sm:text-base text-muted-foreground font-grotesk">
-            <RevealText text={PERSONAL_INFO.bio} delay={1.6} />
+            <RevealText text={PERSONAL_INFO.bio} delay={1.1} />
           </p>
 
           {/* CTA Buttons with magnetic + shimmer */}

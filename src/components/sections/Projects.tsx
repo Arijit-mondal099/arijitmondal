@@ -6,28 +6,52 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { PROJECTS } from "@/lib/constants";
-import { useFadeIn, useStagger } from "@/components/animations/gsap-hooks";
+import { useStagger } from "@/components/animations/gsap-hooks";
 import ClipPath from "../ClipPath";
+import { motion } from "motion/react"; 
 
 export function Projects() {
-  const titleRef = useFadeIn();
   const projectsRef = useStagger(0.15);
 
   return (
     <section id="projects" className="section-padding relative">
       <div className="container-custom">
         {/* Section Title */}
-        <div
-          ref={titleRef as React.RefObject<HTMLDivElement>}
-          className="text-center mb-12"
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, damping: 18 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Featured Projects
+          <motion.div
+            className="inline-block mb-3"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+          >
+            <span className="text-xs font-mono tracking-widest text-primary uppercase border border-primary/30 rounded-full px-4 py-1 bg-primary/5">
+              PROJECTS
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl font-bold tracking-tight sm:text-4xl mb-4 font-sora">
+            Featured{" "}
+            <motion.span
+              className="text-gradient"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              Projects
+            </motion.span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sora">
             Explore some of my recent work and side projects
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div

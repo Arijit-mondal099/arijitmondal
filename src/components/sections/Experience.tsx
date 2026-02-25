@@ -9,13 +9,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TIMELINE } from "@/lib/constants";
-import { useFadeIn, useStagger } from "@/components/animations/gsap-hooks";
+import { motion } from "motion/react";
 import { Briefcase, GraduationCap } from "lucide-react";
 
 export function Experience() {
-  const titleRef = useFadeIn();
-  const timelineRef = useStagger(0.2);
-
   const experienceItems = TIMELINE.filter((item) => item.type === "experience");
   const educationItems = TIMELINE.filter((item) => item.type === "education");
 
@@ -83,39 +80,70 @@ export function Experience() {
     <section id="experience" className="section-padding relative">
       <div className="container-custom">
         {/* Section Title */}
-        <div
-          ref={titleRef as React.RefObject<HTMLDivElement>}
-          className="text-center mb-12"
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, damping: 18 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Experience & Education
+          <motion.div
+            className="inline-block mb-3"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+          >
+            <span className="text-xs font-mono tracking-widest text-primary uppercase border border-primary/30 rounded-full px-4 py-1 bg-primary/5">
+              Experience
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl font-bold tracking-tight sm:text-4xl mb-4 font-sora">
+            Experience{" "}
+            <motion.span
+              className="text-gradient"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              & Education
+            </motion.span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sora">
             My professional journey and educational background
           </p>
-        </div>
+        </motion.div>
 
-        <div
-          ref={timelineRef as React.RefObject<HTMLDivElement>}
-          className="grid gap-12 lg:grid-cols-2"
-        >
+        <div className="grid gap-12 lg:grid-cols-2">
           {/* Experience */}
-          <div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", bounce: 0.8, duration: 1.2 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Briefcase className="h-6 w-6" />
               Work Experience
             </h3>
             {renderTimelineItems(experienceItems)}
-          </div>
+          </motion.div>
 
           {/* Education */}
-          <div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", bounce: 0.8, duration: 1.2 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <GraduationCap className="h-6 w-6" />
               Education
             </h3>
             {renderTimelineItems(educationItems)}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -27,6 +27,7 @@ import {
 import { SOCIAL_LINKS } from "@/lib/constants";
 import { useSlideIn } from "@/components/animations/gsap-hooks";
 import { motion } from "motion/react";
+import axios from "axios";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -72,10 +73,18 @@ export function Contact() {
     try {
       // Simulate form submission
       // In a real application, you would send this to an API endpoint
-      console.log("Form data:", data);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      setSubmitStatus("success");
+      const res = await axios.post("/api/v1/contact", {
+        toEmail: data.email,
+        name: data.name,
+        subject: data.subject,
+        body: data.message,
+      });
+      
+      if (res.data.success) {
+        setSubmitStatus("success");
+      } else {
+        setSubmitStatus("error");
+      }
       reset();
     } catch (error) {
       console.error("Form submission error:", error);

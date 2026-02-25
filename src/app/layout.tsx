@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SEO_METADATA } from "@/lib/constants";
 import Script from "next/script";
-// import LightRays from "@/components/LightRays";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,23 +40,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <div className="absolute inset-0 -z-10">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays"
-        />
-      </div> */}
-
       <body
-        className={`${inter.variable} font-sans antialiased bg-linear-to-b from-background via-background to-muted/20 relative`}
+        className={`${inter.variable} font-sans antialiased relative`}
       >
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
           {/* Grid overlay */}

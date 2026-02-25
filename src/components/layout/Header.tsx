@@ -1,15 +1,11 @@
 "use client";
 
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useState, useEffect } from "react";
 import MenuSvg from "../MenuSvg";
 import Image from "next/image";
@@ -33,7 +29,6 @@ export function Header() {
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
-    // Smooth scroll to section
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +36,12 @@ export function Header() {
   };
 
   return (
-    <header className="fixed inset-x-2 lg:inset-x-0 top-6 z-50 container-custom border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 rounded-full">
+    <motion.header
+      initial={{ y: 30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", bounce: 0.5, duration: 0.5 }}
+      className="fixed inset-x-2 lg:inset-x-0 top-6 z-50 container-custom border border-gray-200 dark:border-gray-800 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 rounded-full"
+    >
       <nav className="flex h-18 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="relative flex items-center h-9 w-9">
@@ -54,7 +54,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation links */}
-        <div className="hidden md:flex md:items-center md:gap-6 border py-3 px-6 rounded-full backdrop-blur-3xl font-font-code">
+        <div className="hidden md:flex md:items-center md:gap-6 border border-gray-200 dark:border-gray-800 py-3 px-6 rounded-full backdrop-blur-3xl font-font-code">
           {navigation.map((item) => (
             <button
               key={item.name}
@@ -136,6 +136,6 @@ export function Header() {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }

@@ -15,100 +15,98 @@ export const PERSONAL_INFO = {
 
 // ================= SKILLS =================
 export const SKILLS: Skill[] = [
-  // Languages and Databases
-  {
-    name: "C++",
-    category: "Languages and Databases",
-    icon: "/tech_stack_images/cpp.png",
-  },
+  // frontend
   {
     name: "JavaScript",
-    category: "Languages and Databases",
+    category: "Frontend",
     icon: "/tech_stack_images/js.png",
   },
   {
     name: "TypeScript",
-    category: "Languages and Databases",
+    category: "Frontend",
     icon: "/tech_stack_images/ts.png",
   },
   {
     name: "HTML",
-    category: "Languages and Databases",
+    category: "Frontend",
     icon: "/tech_stack_images/html.png",
   },
   {
     name: "CSS",
-    category: "Languages and Databases",
+    category: "Frontend",
     icon: "/tech_stack_images/css.png",
   },
   {
-    name: "MongoDB",
-    category: "Languages and Databases",
-    icon: "/tech_stack_images/mongodb.png",
-  },
-  {
-    name: "Pinecone (Vector DB)",
-    category: "Languages and Databases",
-    icon: "/tech_stack_images/pinecone.png",
-  },
-
-  // Frameworks & Libraries
-  {
     name: "React.js",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/reactjs.png",
   },
   {
     name: "Next.js",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/nextjs.png",
   },
   {
-    name: "Node.js",
-    category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/nodejs.png",
-  },
-  {
-    name: "Express.js",
-    category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/expressjs.png",
-  },
-  {
     name: "Redux",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/redux.png",
   },
   {
-    name: "Mongoose",
-    category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/mongoose.png",
-  },
-  {
-    name: "Socket.IO",
-    category: "Frameworks and Libraries",
-    icon: "/tech_stack_images/socketio.png",
-  },
-  {
     name: "Tailwind CSS",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/tailwindcss.png",
   },
   {
     name: "Shadcn UI",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/shadcn.png",
   },
   {
     name: "Motion",
-    category: "Frameworks and Libraries",
+    category: "Frontend",
     icon: "/tech_stack_images/motion.png",
+  },
+  // backend
+  {
+    name: "MongoDB",
+    category: "Backend",
+    icon: "/tech_stack_images/mongodb.png",
+  },
+  {
+    name: "MySQL",
+    category: "Backend",
+    icon: "/tech_stack_images/mongodb.png",
+  },
+  {
+    name: "Pinecone (Vector DB)",
+    category: "Backend",
+    icon: "/tech_stack_images/pinecone.png",
+  },
+  {
+    name: "Node.js",
+    category: "Backend",
+    icon: "/tech_stack_images/nodejs.png",
+  },
+  {
+    name: "Express.js",
+    category: "Backend",
+    icon: "/tech_stack_images/expressjs.png",
+  },
+  {
+    name: "Mongoose",
+    category: "Backend",
+    icon: "/tech_stack_images/mongoose.png",
+  },
+  {
+    name: "Socket.IO",
+    category: "Backend",
+    icon: "/tech_stack_images/socketio.png",
   },
   {
     name: "LangChain",
-    category: "Frameworks and Libraries",
+    category: "AI and Data",
     icon: "/tech_stack_images/langchain.png",
   },
-
   // AI / Data
   {
     name: "RAG",
@@ -130,36 +128,35 @@ export const SKILLS: Skill[] = [
     category: "AI and Data",
     icon: "/tech_stack_images/agents.png",
   },
-
-  // Tools & Platforms
+  // Cloud & Tools
   {
     name: "Git",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/git.png",
   },
   {
     name: "GitHub",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/github.png",
   },
   {
     name: "AWS",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/aws.png",
   },
   {
     name: "Docker",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/docker.png",
   },
   {
     name: "Postman",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/postman.png",
   },
   {
     name: "VS Code",
-    category: "Tools and Platforms",
+    category: "Cloud & Tools",
     icon: "/tech_stack_images/vscode.png",
   },
 ];

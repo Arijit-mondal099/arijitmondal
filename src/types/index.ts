@@ -2,7 +2,7 @@
 
 export interface Skill {
   name: string;
-  category: "Languages and Databases" | "Frameworks and Libraries" | "Tools and Platforms" | "AI and Data";
+  category: "Frontend" | "Backend" | "Cloud & Tools" | "AI and Data";
   icon: string;
 }
 

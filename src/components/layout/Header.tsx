@@ -109,12 +109,15 @@ export function Header() {
 
       {/* Mobile Navigation links */}
       {mobileMenuOpen && (
-        <div
-          className="md:hidden fixed inset-2 lg:inset-0 top-24 z-40 min-h-[calc(100vh-10rem)] bg-background backdrop-blur supports-backdrop-filter:bg-background/99 rounded-2xl"
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", bounce: 0.6, duration: 0.6, }}
+          className="md:hidden fixed inset-2 lg:inset-0 top-24 z-40 min-h-[calc(100vh-10rem)] bg-background backdrop-blur supports-backdrop-filter:bg-background rounded-2xl"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="container-custom py-8 flex flex-col gap-4 border h-full rounded-2xl"
+            className="container-custom py-8 flex flex-col gap-4 border border-gray-200 dark:border-gray-800 h-full rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="space-y-4">
@@ -122,7 +125,7 @@ export function Header() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="block w-full px-4 py-4 text-sm font-medium text-foreground hover:bg-accent rounded-md transition-colors border text-center uppercase font-code"
+                  className="block w-full px-4 py-4 text-sm font-medium text-foreground hover:bg-gray-400 duration-300 cursor-pointer rounded-md transition-colors border border-gray-200 dark:border-gray-800 text-center uppercase font-code"
                 >
                   {item.name}
                 </button>
@@ -134,7 +137,7 @@ export function Header() {
               Get Started
             </Button>
           </div>
-        </div>
+        </motion.div>
       )}
     </motion.header>
   );

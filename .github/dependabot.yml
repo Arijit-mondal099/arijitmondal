@@ -1,0 +1,40 @@
+version: 2
+
+updates:
+  # npm dependencies
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: Asia/Kolkata
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - npm
+    groups:
+      # Bundle minor + patch updates so the PR queue stays small.
+      # Major bumps still get their own PRs (default behavior).
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+    ignore:
+      # Pin React/React-DOM so a 19.x → 20.x doesn't sneak in via a group.
+      - dependency-name: react
+        update-types: [version-update:semver-major]
+      - dependency-name: react-dom
+        update-types: [version-update:semver-major]
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: Asia/Kolkata
+    labels:
+      - dependencies
+      - github-actions
